@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>VaKey.Core</RootNamespace>
+    <Description>VaKey typing engine (Telex/VNI), independent of Windows.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="VaKey.Core.Tests" />
+  </ItemGroup>
+
+</Project>

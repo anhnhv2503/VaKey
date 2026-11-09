@@ -1,0 +1,15 @@
+{
+  // Hồ sơ tương thích theo tiến trình. Chép sang %AppData%\VaKey\profiles.json để sửa.
+  // sendMode: Standard | Slow | Selection | Clipboard ; disabled: true để tự tắt bộ gõ.
+  "version": 1,
+  "profiles": [
+    { "process": "mstsc.exe", "sendMode": "Slow", "note": "Remote Desktop" },
+    { "process": "msrdc.exe", "sendMode": "Slow", "note": "Remote Desktop (Store)" },
+    { "process": "vmconnect.exe", "sendMode": "Slow", "note": "Hyper-V" },
+    { "process": "vmware.exe", "sendMode": "Slow", "note": "VMware Workstation" },
+    { "process": "vmware-vmx.exe", "sendMode": "Slow", "note": "VMware Workstation" },
+    { "process": "virtualboxvm.exe", "sendMode": "Slow", "note": "VirtualBox" },
+    { "process": "conhost.exe", "sendMode": "Standard", "note": "cmd / PowerShell cũ" },
+    { "process": "windowsterminal.exe", "sendMode": "Standard", "note": "Windows Terminal" }
+  ]
+}

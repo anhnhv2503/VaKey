@@ -1,0 +1,4 @@
+# Từ tiếng Anh trùng với âm tiết tiếng Việt hợp lệ khi gõ Telex (this → thí, these → thế, var → vả...).
+# Không thể tự nhận biết bằng kiểm tra chính tả (Unikey cũng biến đổi các từ này).
+# Giải pháp: danh sách ngoại lệ tiếng Anh (EngineOptions.EnglishExceptions / cài đặt "Từ tiếng Anh").
+most queue there must list those here these this own var last tax if is see box mix

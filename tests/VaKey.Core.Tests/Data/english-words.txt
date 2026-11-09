@@ -1,0 +1,16 @@
+# Từ tiếng Anh không được biến đổi khi bật kiểm tra chính tả (Telex).
+# Lưu ý: những từ trùng với âm tiết tiếng Việt hợp lệ (tax → tã, if → ì, is → í, see → sê)
+# KHÔNG thể tự nhận biết; người dùng thêm chúng vào danh sách ngoại lệ tiếng Anh.
+window windows where when what which while process static class string return public
+private protected function import export default select script python struct switch
+google github chrome email password server client project program design system
+history first world word work would could should about after again against before
+because between both during each every from have into just know little
+long make many never next only other over people place right same
+small some still such take than that them then they think 
+three through under until very want well were with without year your
+ let const async await interface override virtual abstract internal sealed
+null true false break continue throw catch finally namespace using typeof sizeof
+array dictionary stack thread task event delegate value object number
+http https json html xml yaml docker kubernetes linux windows macos ubuntu
+keyboard mouse screen monitor laptop desktop network browser

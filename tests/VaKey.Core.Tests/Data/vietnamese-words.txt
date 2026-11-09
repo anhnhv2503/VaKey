@@ -1,0 +1,32 @@
+# Âm tiết tiếng Việt thông dụng (kiểu đặt dấu mới). Dùng cho test khứ hồi Telex/VNI.
+# Mỗi từ được mã hóa thành chuỗi phím chuẩn rồi gõ qua engine; kết quả phải trùng từ gốc.
+và của có là không được người một những trong cho với các này đã để khi đến từ
+theo ra nhiều như về sẽ cũng thì nhưng năm làm lại trên phải nên mà bị đó vào
+chúng tôi bạn họ anh chị em ông bà cô chú bác cháu con cha mẹ vợ chồng gia đình
+nhà cửa phòng bếp giường bàn ghế tủ sách vở bút giấy mực thước cặp áo quần giày dép
+mũ nón khăn trời đất nước lửa gió mưa nắng mây sấm sét bão lũ biển sông suối hồ ao
+núi rừng cây lá hoa quả trái hạt rễ cành gốc ngọn cỏ lúa gạo ngô khoai sắn đậu
+rau thịt cá tôm cua ốc trứng sữa bánh kẹo đường muối dầu mỡ tiêu ớt hành tỏi gừng
+ăn uống ngủ nghỉ đi đứng ngồi nằm chạy nhảy bơi leo trèo nói nghe nhìn thấy biết
+hiểu nghĩ nhớ quên yêu ghét thích muốn cần mua bán trả lời hỏi học dạy viết đọc
+xem chơi hát múa vẽ chụp gửi nhận mở đóng bật tắt lấy đưa cầm nắm kéo đẩy ném bắt
+tốt xấu đẹp hay dở to nhỏ lớn bé dài ngắn cao thấp béo gầy nhanh chậm nóng lạnh
+ấm mát khô ướt sạch bẩn mới cũ trẻ già giàu nghèo khỏe yếu vui buồn giận sợ thương
+xanh đỏ vàng tím trắng đen nâu hồng xám cam lục lam
+hai ba bốn năm sáu bảy tám chín mười trăm nghìn triệu tỷ nửa đôi chục
+sáng trưa chiều tối đêm ngày tháng tuần giờ phút giây hôm qua nay mai sớm muộn
+xuân hạ thu đông tết lễ hội chợ phố đường làng xã huyện tỉnh thành nước quốc gia
+việt nam hà nội huế sài gòn đà nẵng cần thơ hải phòng nghệ an thanh hóa quảng ninh
+trường lớp thầy giáo sinh viên bệnh viện bác sĩ y tá công ty việc làm lương thưởng
+máy tính điện thoại mạng phần mềm bàn phím chuột màn hình chương trình dữ liệu
+khuya khuỷu ngoẹo ngoài xoay quay khuây khuyên khuyết tuyết nguyễn luyện chuyện
+quyết quyển quý quỳnh quẹo quăng quân quốc quê quà quạt quần quét
+gì gìn giữ già giá giếng giết giấu giây giỏi giúp giường giọng
+hoặc hoàng hoạt hoa hòa hỏa họa khóa khỏe xòe lòe thủy thúy lũy tùy
+được nước ước ướt rượu hươu bướu cười tười mười người đười lưỡi ruồi cuối buổi tuổi
+thuở huơ quơ tương thương phương trương dương lương cương khương
+ếch xếch mếu kêu kều nghiêng nghiệp nghiệm chiếng tiếng biếng siêng
+oái oai ngoái ngoáy ngoằn oẳn hoắc thoắt choáng loáng khoảng hoảng
+ý yêu yếu yên yến ỷ
+đủ đúng đứng đừng đâu đấy đây đó đều đã đang đầu đỏ đổ đỗ đọc đội đơn đời
+im ít ích ỉm ỉu ổi ốm ồn ở ơi ừ ửng ướm
