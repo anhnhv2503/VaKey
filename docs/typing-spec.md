@@ -97,3 +97,7 @@ Enter, Tab, phím mũi tên, Home/End, Delete, Esc, click chuột, đổi cửa 
 
 Xóa một ký tự hiển thị khỏi buffer. Dấu thanh được đặt lại đúng chỗ (`hoán` → `hóa`); nếu không còn nguyên âm
 thì bỏ dấu thanh. Khi buffer rỗng, Backspace được chuyển tiếp nguyên vẹn.
+
+Nếu từ đã bị trả về đúng chuỗi phím gốc (sai chính tả, từ ngoại lệ) hoặc đang ở trạng thái hoàn tác do gõ lặp
+phím biến đổi, Backspace dựng lại phần còn lại theo quy tắc gõ. Nhờ vậy chỉ cần xóa phím sai rồi gõ tiếp, không
+phải xóa cả từ rồi gõ lại.

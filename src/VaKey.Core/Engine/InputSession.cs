@@ -109,6 +109,20 @@ public sealed class InputSession
         if (_buf.Count == 0) return EngineResult.PassThrough;
 
         string old = _rendered;
+
+        // Từ đã bị trả về đúng chuỗi phím gốc (sai chính tả hoặc ngoại lệ) nên các phím biến đổi
+        // đã bị "nuốt". Xóa một phím rồi dựng lại từ phần còn lại để người dùng tiếp tục gõ được,
+        // thay vì bắt buộc phải xóa cả từ rồi gõ lại.
+        if (_disabled && _raw.Length == _buf.Count && RenderEquals(_raw))
+        {
+            string keys = _raw.ToString(0, _raw.Length - 1);
+            Reset();
+            foreach (char k in keys) Process(k);
+            return _rendered.Length == old.Length - 1 && old.StartsWith(_rendered, StringComparison.Ordinal)
+                ? EngineResult.PassThrough
+                : MakeDiff(old, _rendered);
+        }
+
         _buf.RemoveAt(_buf.Count - 1);
         if (_buf.Count == 0)
         {
@@ -121,6 +135,14 @@ public sealed class InputSession
         // Chuỗi phím gốc không còn khớp chính xác; giữ lại chữ cái gốc để hoàn tác khi sai chính tả.
         _raw.Clear();
         foreach (var c in _buf) _raw.Append(c.Upper ? char.ToUpperInvariant(c.Base) : c.Base);
+
+        // Phần còn lại đã là tiền tố tiếng Việt hợp lệ: bật lại biến đổi để người dùng gõ tiếp
+        // (trước đây từ bị "khóa" ở trạng thái nguyên văn sau khi gõ lặp phím biến đổi).
+        if (_disabled && IsValid())
+        {
+            _disabled = false;
+            _afterUndo = false;
+        }
 
         _rendered = Render();
         if (_rendered.Length == old.Length - 1 && old.StartsWith(_rendered, StringComparison.Ordinal))

@@ -104,6 +104,90 @@ public class BackspaceAndResultTests
     }
 
     [Fact]
+    public void BackspaceAfterSpellCheckFailureAllowsRetry()
+    {
+        // Gõ sai phím dấu (k thay vì j) → từ bị trả về chuỗi gốc và tắt biến đổi.
+        var t = new Typist().Keys("vieetk");
+        Assert.Equal("vieetk", t.Screen);
+
+        // Chỉ cần xóa phím sai rồi gõ lại, không phải xóa cả từ.
+        t.Backspace();
+        Assert.Equal("viêt", t.Screen);
+        t.Keys("j");
+        Assert.Equal("việt", t.Screen);
+    }
+
+    [Fact]
+    public void BackspaceAfterInvalidExtraKeyReplaysRemainingKeys()
+    {
+        var t = new Typist().Keys("nguoiw");
+        Assert.Equal("ngươi", t.Screen);
+
+        // Thêm 'q' làm từ sai chính tả → quay về chuỗi phím gốc.
+        t.Keys("q");
+        Assert.Equal("nguoiwq", t.Screen);
+
+        // Xóa 'q': phần còn lại được dựng lại thành tiếng Việt để gõ tiếp.
+        t.Backspace();
+        Assert.Equal("ngươi", t.Screen);
+        t.Keys("f");
+        Assert.Equal("người", t.Screen);
+    }
+
+    [Fact]
+    public void BackspaceAfterInvalidExtraKeyWorksWithVni()
+    {
+        var options = new EngineOptions { Method = InputMethodKind.Vni };
+        var t = new Typist(options).Keys("vie6t5");
+        Assert.Equal("việt", t.Screen);
+
+        t.Keys("k");
+        Assert.Equal("vie6t5k", t.Screen);
+
+        t.Backspace();
+        Assert.Equal("việt", t.Screen);
+        t.Keys("1");
+        Assert.Equal("viết", t.Screen);
+    }
+
+    [Fact]
+    public void BackspaceAfterInvalidExtraKeyPreservesUppercase()
+    {
+        var t = new Typist().Keys("VIEETK");
+        Assert.Equal("VIEETK", t.Screen);
+
+        t.Backspace();
+        t.Keys("J");
+        Assert.Equal("VIỆT", t.Screen);
+    }
+
+    [Fact]
+    public void BackspaceAfterRepeatedTransformUndoResumesConversion()
+    {
+        // "aaa" → "aa" (gõ lặp phím biến đổi). Xóa một 'a' rồi gõ lại phải ra "â".
+        var t = new Typist().Keys("aaa");
+        Assert.Equal("aa", t.Screen);
+
+        t.Backspace();
+        Assert.Equal("a", t.Screen);
+        t.Keys("a");
+        Assert.Equal("â", t.Screen);
+    }
+
+    [Fact]
+    public void BackspaceAfterBreveUndoResumesConversion()
+    {
+        // "aww" → "aw". Xóa 'w' rồi gõ lại phải ra "ă".
+        var t = new Typist().Keys("aww");
+        Assert.Equal("aw", t.Screen);
+
+        t.Backspace();
+        Assert.Equal("a", t.Screen);
+        t.Keys("w");
+        Assert.Equal("ă", t.Screen);
+    }
+
+    [Fact]
     public void MethodsReportTransformKeys()
     {
         Assert.True(TelexMethod.Instance.IsTransformKey('s'));
